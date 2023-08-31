@@ -17,7 +17,7 @@
             </button>
 
             <p class="text-3xl">
-                {{ $result }}
+                {{ $result }} 
             </p>
 
 </div>
