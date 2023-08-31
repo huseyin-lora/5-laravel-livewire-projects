@@ -1,6 +1,10 @@
 <div>
 
 
+    <div class="flex flex-col items-center">
+        <div class="flex p-16 mx-auto justify-center items-center gap-4">
+
+
             <input type="number" class="w-4/10" wire:model='number1' placeholder="Number 1">
             <select class="w-2/10" wire:model='action'>
                 <option>+</option>
@@ -13,11 +17,13 @@
 
 
             <button wire:click='calculate' class="by-2 px-4 bg-indigo-500 hover:bg-indigo-600 disabled:cursor-not-allowed disabled:bg-opacity-90 rounded text-white">
-                {{ $disabled ? 'disabled' : '' }}
+                {{ $disabled ? 'disabled' : '='  }} 
             </button>
 
             <p class="text-3xl">
-                {{ $result }} 
+                {{ $result }}
             </p>
+        </div>
+    </div>
 
 </div>
