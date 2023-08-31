@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ $title ?? 'Page Title' }}</title>
-
-    @vite(['/resources/css/app.css', '/resources/js/app.js'])
+    @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
     <livewire:styles />
 </head>
+
+{{-- 
+    To work with TailwindCSS, you need to
+    1- npm run dev
+    2- php artisan serve
+    --}}
 
 <body>
     <nav class="flex bg-slate-700 text-white mb-5">
@@ -21,6 +27,10 @@
         <a href="/image-upload" class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('image-upload')) ? 'bg-slate-800' : '' }}">Image Upload</a>
         <a href="/register" class="py-4 px-6 hover:bg-slate-800 {{ (request()->routeIs('register')) ? 'bg-slate-800' : '' }}">Registration</a>
     </nav>
+
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+      </h1>
 
     {{ $slot }}
 
