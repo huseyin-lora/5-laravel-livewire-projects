@@ -3,18 +3,8 @@
 use App\Livewire\Counter;
 use App\Livewire\TodoList;
 use App\Livewire\Calculator;
+use App\Livewire\CascadingDropdown;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,4 +13,7 @@ Route::get('/', function () {
 Route::get('/calculator' , Calculator::class);
 Route::get('/counter' , Counter::class);
 Route::get('/todo-list' , TodoList::class);
+Route::get('/cascading-dropdown' , CascadingDropdown::class);
+/* Route::get('/products' , TodoList::class);
+Route::get('/image-upload' , TodoList::class); */
 

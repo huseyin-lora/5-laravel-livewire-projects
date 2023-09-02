@@ -15,7 +15,7 @@
             @endif
 
             @foreach ($todos as $index => $todo)
-                <div class="flex gap-4 justify-between items-center py-1">
+                <div class="flex gap-4 justify-between items-center p-2 rounded border-2 border-blue-500 mb-4">
                     <input type="checkbox" {{ $todo->completed ? 'checked' : '' }}
                         wire:change='toggleTodo({{ $todo->id }})'>
                     <label class="flex-1 {{ $todo->completed ? 'line-through' : '' }}">{{ $todo->todo }}</label>
