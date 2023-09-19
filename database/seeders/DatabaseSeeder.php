@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\Country;
 use App\Models\Continent;
 use Database\Factories\ContinentFactory;
+use Database\Factories\ProductFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,8 +29,11 @@ class DatabaseSeeder extends Seeder
                     Country::factory()->count(5)->make()
                 );
             });
-
         }
+
+
+
+        ProductFactory::new()->count(100)->create();
         
     }
 }
