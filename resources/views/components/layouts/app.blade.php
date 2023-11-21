@@ -29,6 +29,9 @@
 
     {{ $slot }}
 
+    <livewire:todo-list /> 
+    <livewire:product-search /> 
+
     <livewire:scripts />
 </body>
 

@@ -11,9 +11,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/calculator' , Calculator::class);
-Route::get('/counter' , Counter::class);
-Route::get('/todo-list' , TodoList::class);
-Route::get('/cascading-dropdown' , CascadingDropdown::class);
-Route::get('/products' , ProductSearch::class)->name('products');
-
+Route::get('/calculator', Calculator::class);
+Route::get('/counter', Counter::class);
+Route::get('/todo-list', TodoList::class);
+Route::get('/cascading-dropdown', CascadingDropdown::class);
+Route::get('/products', ProductSearch::class)->name('products');
